@@ -1,29 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <title>Pedra, Papel ou Tesoura!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
-    <title>Increment Counter</title>
   </head>
   <body>
-    <div class="counter-container">
-      <i class="fab fa-twitter fa-3x"></i>
-      <div class="counter" data-target="12000"></div>
-      <span>Twitter Followers</span>
+    <div class="container">
+      <div class="pontuacao">
+        <p>Computador: <span id="computador_pontuacao">0</span></p>
+        <p>Você: <span id="usuario_pontuacao">0</span></p>
+      </div>
+      <div class="escolhas">
+        <button onclick="verificar('pedra')">
+          <i class="far fa-hand-rock"></i>
+        </button>
+        <button onclick="verificar('papel')">
+          <i class="far fa-hand-paper"></i>
+        </button>
+        <button onclick="verificar('tesoura')">
+          <i class="far fa-hand-scissors"></i>
+        </button>
     </div>
-
-    <div class="counter-container">
-      <i class="fab fa-youtube fa-3x"></i>
-      <div class="counter" data-target="5000"></div>
-      <span>YouTube Subscribers</span>
-    </div>
-
-    <div class="counter-container">
-      <i class="fab fa-facebook fa-3x"></i>
-      <div class="counter" data-target="7500"></div>
-      <span>Facebook Fans</span>
+        <div class="detalhes">
+          <p id="usuario_escolha"></p>
+          <p id="computador_escolha"></p>
+          <p id="resultado"></p>
+        </div>
     </div>
     <script src="script.js"></script>
   </body>
