@@ -1,36 +1,84 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
-
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
-
 body {
-  background-color: #8e44ad;
-  color: #fff;
-  font-family: 'Roboto Mono', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
-  overflow: hidden;
-  margin: 0;
+  background: linear-gradient(135deg, #ffcf1b, #ff8b1b);
 }
-
-.counter-container {
+.container {
+  width: 45%;
+  background-color: #fff;
+  padding: 40px 30px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+.pontuacao {
+  margin-bottom: 50px;
+  text-align: right;
+}
+.escolhas {
+  width: 90%;
+  margin: auto;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+}
+.escolhas button {
+  background-color: #ffd51b;
+  color: #000;
+  border: none;
+  font-size: 50px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+.detalhes {
+  margin-top: 30px;
   text-align: center;
-  margin: 30px 50px;
+}
+.pontuacao,
+.detalhes {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+#resultado {
+  width: 180px;
+  padding: 10px 0;
+  margin: 30px auto;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+#usuario_escolha,
+#computador_escolha {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+span {
+  font-weight: 600;
 }
 
-.counter {
-  font-size: 60px;
-  margin-top: 10px;
-}
-
-@media (max-width: 580px) {
-  body {
+@media screen and (max-width: 900px) {
+  .escolhas {
     flex-direction: column;
+  }
+  .escolhas button {
+    margin: 10px auto;
+  }
+  #resultado {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 10px 5px;
   }
 }
